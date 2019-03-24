@@ -1,18 +1,21 @@
 import numpy as np
 import sensors
 
-print("What letter are you currently training?")
+letter = "init"
 
-letter = input()
+print("What letter are you currently training?")
+while(len(letter) > 1):
+    letter = input().upper()
+    if len(letter) > 1:
+        print("Please enter a SINGLE letter:")
 print(f"now training for letter {letter}")
 
 
 def train(letter):
-    print(
-        "Make the proper hand posisition and press enter when ready, or enter q to quit "
-    )
-    if input() == "q":
-        return
+    print("Make the proper hand position and press enter when ready or enter q to quit")
+
+    if input().lower() == "q":
+        quit()
     data = sensors.read()
     # gets an array of values representing the sensor values
 
@@ -26,3 +29,4 @@ def train(letter):
 
 
 train(letter)
+quit()
