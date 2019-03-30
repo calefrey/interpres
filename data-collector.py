@@ -8,7 +8,7 @@ while(len(letter) > 1):
     letter = input().upper()
     if len(letter) > 1:
         print("Please enter a SINGLE letter:")
-print(f"now training for letter {letter}")
+    print(f"now training for letter {letter}")
 
 
 def train(letter):
